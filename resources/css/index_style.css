@@ -1,9 +1,13 @@
 
-
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
-
     background-image: url(../img/Grupo\ 1.png);
     background-repeat: no-repeat;
 }
@@ -19,7 +23,7 @@ header{
 
 header .logo{
     font-size: 25px;
-    width: 100px;
+    width: 180px;
     height: 100%;
     /* background-color: green; */
     color: white;
@@ -28,6 +32,11 @@ header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 10px;
 }
 
 header .menu{
@@ -54,6 +63,10 @@ ul li{
     margin-left: 60px;
 }
 
+li a {
+    color: white;
+}
+
 header .login{
     width: 150px;
     height: 100%;
@@ -66,6 +79,7 @@ header .login{
 }
 
 .login .fake_button{
+    width: 50px;
     font-size: 20px;
 
     font-family: 'Staatliches';
@@ -75,6 +89,9 @@ header .login{
     border-radius: 5px;
 
     padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login .fake_button:hover{
@@ -86,7 +103,6 @@ header .login{
 
 .container{
     /* background-color: brown; */
-
     display: flex;
     padding: 100px;
 }
@@ -146,9 +162,175 @@ header .login{
     height: 300px;
 }
 
+.conhecimentos{
+    background-color: #031027;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px;
+}
+
+.conhecimentos .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+    color: white;
+}
+
+.conhecimentos .subtitulo{
+    font-size: 35px;
+    font-family: 'Rajdhani';
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+}
+
+.card .nebulosa_img img{
+    width: 130px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -15px;
+}
+
+.card .headerzinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .titulo{
+    /* background-color: red; */
+    font-size: 30px;
+    color: black;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .titulo_two{
+    /* background-color: blue; */
+    font-size: 20px;
+    font-family: 'Rajdhani Medium';
+    float: left;
+
+    margin-left: 10px;
+}
+
+
+.nebulosa_img{
+    /* background-color: red; */
+}
+
+.card .texto{
+    width: 380px;
+    /* background-color: red; */
+    font-size: 18px;
+    font-family: 'Rajdhani Medium';
+}
+
+.descricao{
+    height: 80px;
+    background-color: white;
+    border-radius: 11px;
+    padding: 20px 30px 20px 80px;
+}
+
+.stars{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.teorias{
+    background-color: #010A1A;
+}
+
+.blok{
+    background-color: #031027;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 100px;
+}
+
+.blok .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+    color: white;}
+
+.blok .subtitulo{
+    font-size: 35px;
+    font-family: 'Rajdhani';
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    width: 500px;
+}
+
+.conteudo .fake_button{
+    width: 200px;
+    height: 60px;
+    font-family: 'Rajdhani';
+
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    font-size: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.conteudo .fake_button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+.footer{
+    height: 100px;
+    background-color: #010A1A;
+}
 
 
 
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #031027;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+}
 
 /* Animações */
 @keyframes bounce {
