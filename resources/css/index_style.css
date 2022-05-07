@@ -311,10 +311,50 @@ header .login{
     transition: 0.3s;
 }
 .footer{
-    height: 100px;
     background-color: #010A1A;
+
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.footer .titulo{
+    font-size: 40px;
+    font-family: 'Staatliches';
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo .pg{
+    font-size: 18px;
+    font-family: 'Rajdhani';
+}
+
+.titulo .direitos{
+    font-size: 15px;
+    font-family:'Rajdhani';
+}
+
+.entrar{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar .titulo{
+    font-size: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction:row;
+}
+
+.entrar .subtitulo{
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    margin-left: 20px;
+}
 
 
 ::-webkit-scrollbar {
