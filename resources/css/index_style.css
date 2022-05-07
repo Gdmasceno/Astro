@@ -1,0 +1,188 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+
+    background-image: url(../img/Grupo\ 1.png);
+    background-repeat: no-repeat;
+}
+
+header{
+    height: 80px;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 25px;
+    width: 100px;
+    height: 100%;
+    /* background-color: green; */
+    color: white;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu{
+    width: 800px;
+    height: 100%;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    color: white;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+
+    margin-left: 60px;
+}
+
+header .login{
+    width: 150px;
+    height: 100%;
+
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button{
+    font-size: 20px;
+
+    font-family: 'Staatliches';
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+}
+
+.login .fake_button:hover{
+    background-color: white;
+    color: black;
+
+    transition: 1s;
+}
+
+.container{
+    /* background-color: brown; */
+
+    display: flex;
+    padding: 100px;
+}
+
+.container .left_side{
+    width: 40%;
+    height: 400px;
+    /* background-color: black; */
+}
+
+.left_side .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+    color: white;
+}
+
+.left_side .texto{
+    font-size: 35px;
+    color: white;
+    font-family: 'Rajdhani';
+}
+
+.left_side .fake_button{
+    width: 200px;
+
+    font-size: 40px;
+    font-family: 'Rajdhani';
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.left_side .fake_button:hover{
+    animation: balance 5s;
+}
+
+.container .right_side{
+    width: 600px;
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: right;
+}
+
+.right_side img{
+    animation: bounce 3s ease infinite;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
+/* Animações */
+@keyframes bounce {
+    20%{
+        transform: translate3d(0, -20px, 0);
+    }
+
+    40%{
+        transform: translate3d(0, -10px, 0);
+    }
+
+    80%{
+        transform: translate3d(0, 2px, 0);
+    }
+
+    100%{
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+@keyframes balance {
+    20%{
+        transform: translate3d(0, -5px, 0);
+    }
+
+    40%{
+        transform: translate3d(0, 0px, 0);
+    }
+
+    80%{
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100%{
+        transform: translate3d(0, 0px, 0);
+    }
+}
