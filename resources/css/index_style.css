@@ -244,8 +244,12 @@ header .login{
     background-color: white;
     border-radius: 11px;
     padding: 20px 30px 20px 80px;
+    cursor: pointer;
 }
 
+.descricao img{
+    z-index: initial;
+}
 .stars{
     width: 100%;
     display: flex;

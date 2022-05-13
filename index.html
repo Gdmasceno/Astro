@@ -20,9 +20,11 @@
                 <li><a href="#teorias">Teorias</a></li>
             </ul>
         </div>
-        <div class="login">
-            <div class="fake_button">Login</div>
-        </div>
+        <a href="login.html">
+            <div class="login">
+                <div class="fake_button">Login</div>
+            </div>
+        </a>
     </header>
 
     <div class="container">
@@ -57,7 +59,7 @@
                 <img src="resources/img/nebulosa.png" alt="">
             </div>
 
-            <div class="descricao">
+            <div onclick="IrNebulosas()" class="descricao" style="cursor: pointer;">
                 <div class="headerzinho">
                     <div class="titulo">As Nebulosas
                         <div class="titulo_two">As nuvens espaciais</div>
@@ -78,7 +80,7 @@
                 <img src="resources/img/telescopio.png" alt="">
             </div>
 
-            <div class="descricao">
+            <div class="descricao" onclick="irTelescopios()" style="cursor: pointer;">
                 <div class="headerzinho">
                     <div class="titulo">Os telescópios
                         <div class="titulo_two">James webb e Hubble</div>
@@ -107,7 +109,7 @@
                 <img src="resources/img/big-bang.png" alt="">
             </div>
 
-            <div class="descricao">
+            <div class="descricao" onclick="irBigBang()">
                 <div class="headerzinho">
                     <div class="titulo">O Big Bang
                         <div class="titulo_two">A origem do universo</div>
@@ -128,7 +130,7 @@
                 <img src="resources/img/ufo (2).png" alt="">
             </div>
 
-            <div class="descricao">
+            <div class="descricao" onclick="irEts()">
                 <div class="headerzinho">
                     <div class="titulo">Vida alienígena
                         <div class="titulo_two">Telefone minha casa</div>
@@ -177,3 +179,21 @@
 </body>
 
 </html>
+
+<script>
+    function IrNebulosas() {
+        window.location.assign("nebulosas.html");
+    }
+
+    function irTelescopios() {
+        window.location.assign("telescopios.html");
+    }
+
+    function irBigBang() {
+        window.location.assign("bigbang.html");
+    }
+
+    function irEts() {
+        window.location.assign("ets.html");
+    }
+</script>
