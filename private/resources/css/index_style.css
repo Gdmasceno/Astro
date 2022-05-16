@@ -1,0 +1,267 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #031027;
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    height: 80px;
+    /* background-color: red; */
+    
+    background-image: url(../../../public/resources/img/headerzinho.png);
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 25px;
+    width: 180px;
+    height: 100%;
+    /* background-color: green; */
+    color: white;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+header .menu{
+    width: 800px;
+    height: 100%;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    color: white;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+
+    margin-left: 60px;
+}
+
+li a {
+    color: white;
+}
+
+header .sair{
+    width: 150px;
+    height: 100%;
+    font-family: 'Rajdhani';
+    color: white;
+    font-weight: bold;
+
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button{
+    width: 50px;
+    font-size: 20px;
+
+    font-family: 'Staatliches';
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button:hover{
+    background-color: white;
+    color: black;
+
+    transition: 1s;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .titulo{
+    font-size: 60px;
+
+    font-family: 'Staatliches';
+    color: white;
+
+    margin-top: 80px;
+}
+
+
+.main .subtitulo{
+    width: 600px;
+    font-size: 35px;
+
+    font-family: 'Rajdhani';
+    color: white;
+    text-align: center;
+}
+
+.selecoes{
+     width: 100%;
+     /* background-color: red; */
+     margin-top: 70px;
+
+     display: flex;
+     justify-content: space-around;
+}
+
+.card{
+    display: flex;
+}
+
+.card .nebulosa_img img{
+    width: 130px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -15px;
+}
+
+.card .headerzinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .titulo{
+    /* background-color: red; */
+    font-size: 30px;
+    color: black;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.card .titulo_two{
+    /* background-color: blue; */
+    font-size: 20px;
+    font-family: 'Rajdhani Medium';
+    float: left;
+
+    margin-left: 10px;
+}
+
+
+.nebulosa_img{
+    /* background-color: red; */
+}
+
+.card .texto{
+    width: 300px;
+    /* background-color: red; */
+    font-size: 18px;
+    font-family: 'Rajdhani Medium';
+}
+
+.descricao{
+    width:300px;
+    height: 80px;
+    background-color: white;
+    border-radius: 11px;
+    padding: 20px 30px 20px 80px;
+    cursor: pointer;
+}
+
+.descricao img{
+    z-index: initial;
+}
+
+#unic{
+    width: 110px;
+}
+
+
+.footer{
+    background-color: #010A1A;
+
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .titulo{
+    font-size: 40px;
+    font-family: 'Staatliches';
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .titulo .pg{
+    font-size: 18px;
+    font-family: 'Rajdhani';
+}
+
+.footer .titulo .direitos{
+    font-size: 15px;
+    font-family:'Rajdhani';
+}
+
+.entrar{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar .titulo{
+    font-size: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction:row;
+}
+
+.entrar .subtitulo{
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #031027;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+}

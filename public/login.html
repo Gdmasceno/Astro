@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/login_style.css">
+    <title>Astro | Entre ou cadastre-se</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="left_side">
+            <p class="titulo">Bem vindo de volta!</p>
+            <p class="subtitulo">A ASTRO FICA CONTENTE EM TER VOCÊ AQUI CONOSCO</p>
+        </div>
+        <div class="right_side">
+            <div class="ri_main">
+                <div class="header_card">
+                    <div class="titulo">Login</div>
+                    <div class="subtitulo">Não possui cadastro?</div>
+
+                    <br>
+                    <br>
+                </div>
+
+                <div class="entradas">
+                    <br>
+                    <input type="text" placeholder="Digite seu email...">
+                    <br>
+                    <input type="text" placeholder="Digite sua senha...">
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <button onclick="entrar()">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function entrar(){
+        window.location.replace('../private/index.html');
+    }
+</script>
