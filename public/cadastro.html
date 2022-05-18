@@ -14,7 +14,7 @@
             <div class="ri_main">
                 <div class="header_card">
                     <div class="titulo">Cadastro</div>
-                    <div class="subtitulo">Já possui cadastro?</div>
+                    <div onclick="irLogin()" class="subtitulo">Já possui cadastro?</div>
 
                     <br>
                     <br>
@@ -33,7 +33,7 @@
                     <br>
                     <br>
 
-                    <button>CADASTRAR</button>
+                    <button onclick="irLogin()">CADASTRAR</button>
                 </div>
             </div>
         </div>
@@ -45,3 +45,9 @@
     </div>
 </body>
 </html>
+
+<script>
+    function irLogin() {
+        window.location.assign("login.html");
+    }
+</script>

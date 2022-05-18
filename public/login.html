@@ -18,7 +18,7 @@
             <div class="ri_main">
                 <div class="header_card">
                     <div class="titulo">Login</div>
-                    <div class="subtitulo">Não possui cadastro?</div>
+                    <div onclick="irCadastro()" class="subtitulo">Não possui cadastro?</div>
 
                     <br>
                     <br>
@@ -45,5 +45,9 @@
 <script>
     function entrar(){
         window.location.replace('../private/index.html');
+    }
+
+    function irCadastro(){
+        window.location.replace('cadastro.html');
     }
 </script>

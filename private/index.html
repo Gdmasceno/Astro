@@ -12,7 +12,7 @@
         <div class="logo"><img src="resources/img/astronauta (1).png" alt=""> Astro</div>
         <div class="menu">
             <ul>
-                <li><a href="index.html">Quiz</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="#conhecimentos">Simule seu peso</a></li>
             </ul>
         </div>
@@ -33,7 +33,7 @@
                     <img src="resources/img/galaxia.png" alt="">
                 </div>
     
-                <div class="descricao" style="cursor: pointer;">
+                <div onclick="irQuiz()" class="descricao" style="cursor: pointer;">
                     <div class="headerzinho">
                         <div class="titulo">Quiz</div>
                     </div>
@@ -87,3 +87,9 @@
     </div>
 </body>
 </html>
+
+<script>
+    function irQuiz() {
+        window.location.assign("quiz.html");
+    }
+</script>

@@ -161,7 +161,8 @@ header .sair{
 
 .container{
     width: 900px;
-    height: 450px;
+    min-height: 350px;
+    max-height: 480px;
 
     background-color: white;
 
@@ -181,6 +182,14 @@ header .sair{
     font-size: 50px;
     font-family: 'Staatliches';
     margin-top: 20px;
+}
+
+.tituloB{
+    width: 500px;
+    font-size: 30px;
+    font-family: 'Staatliches';
+    margin-top: 20px;
+    text-align: center;
 }
 
 .container .subtitulo{
@@ -227,6 +236,13 @@ header .sair{
     align-items: center;
     margin-top: 20px;
     cursor: pointer;
+    text-align: center;
+}
+
+.va{
+    font-size: 25px;
+    font-family: 'Rajdhani';
+    font-weight: bold;
 }
 
 #two .titulo{
