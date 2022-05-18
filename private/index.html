@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/index_style.css">
-    <title>Document</title>
+    <link rel="icon" href="../public/resources/img/astronauta (1).png">
+    <title>Astro</title>
 </head>
 <body>
     <header>
@@ -16,11 +17,9 @@
                 <li><a href="#conhecimentos">Simule seu peso</a></li>
             </ul>
         </div>
-        <a href="login.html">
-            <div class="sair">
+            <div onclick="sair()" class="sair">
                 Sair
             </div>
-        </a>
     </header>
 
     <div class="main">
@@ -92,4 +91,10 @@
     function irQuiz() {
         window.location.assign("quiz.html");
     }
+
+    function sair() {
+        window.location.assign("../public/index.html");
+    }
+
+
 </script>
