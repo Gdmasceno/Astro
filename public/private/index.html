@@ -9,6 +9,7 @@
     <title>Astro</title>
 </head>
 <body>
+    <script src="../js/funcoes.js"></script>
     <header>
         <div class="logo"><img src="resources/img/astronauta (1).png" alt=""> Astro</div>
         <div class="menu">
@@ -17,13 +18,13 @@
                 <li><a href="simulador.html">Simule seu peso</a></li>
             </ul>
         </div>
-            <div onclick="sair()" class="sair">
+            <div onclick="limparSessao()" class="sair">
                 Sair
             </div>
     </header>
 
     <div class="main">
-        <div class="titulo">Olá, usuário!</div>
+        <div class="titulo">Olá, <span id="nome">usuário</span>!</div>
         <div class="subtitulo">Responda perguntas e simule seu peso em outros planetas!</div>
 
         <div class="selecoes">
@@ -88,12 +89,14 @@
 </html>
 
 <script>
+    nome.innerHTML = sessionStorage.NOME_USUARIO;
     function irQuiz() {
         window.location.assign("quiz.html");
     }
 
     function sair() {
-        window.location.assign("../public/index.html");
+        sessionStorage.clear();
+        window.location.replace("../index.html");
     }
 
     function irSimulador() {

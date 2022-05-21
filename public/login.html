@@ -27,9 +27,9 @@
 
                 <div class="entradas">
                     <br>
-                    <input type="text" placeholder="Digite seu email...">
+                    <input id="email_input" type="text" placeholder="Digite seu email...">
                     <br>
-                    <input type="text" placeholder="Digite sua senha...">
+                    <input id="senha_input" type="text" placeholder="Digite sua senha...">
 
                     <br>
                     <br>
@@ -44,11 +44,98 @@
 </html>
 
 <script>
-    function entrar(){
-        window.location.replace('../private/index.html');
-    }
 
     function irCadastro(){
         window.location.replace('cadastro.html');
     }
+</script>
+
+
+
+<script>
+
+
+    function entrar() {
+        // aguardar();
+
+        // console.log("ENTREI NO ENTRAR");
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            // setInterval(sumirMensagem, 5000);
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            // finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "private/index.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        // cardErro.style.display = "none"
+    }
+
 </script>

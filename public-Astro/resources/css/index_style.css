@@ -1,0 +1,414 @@
+
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/Grupo\ 1.png);
+    background-repeat: no-repeat;
+}
+
+header{
+    height: 80px;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 25px;
+    width: 180px;
+    height: 100%;
+    /* background-color: green; */
+    color: white;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+header .menu{
+    width: 800px;
+    height: 100%;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    color: white;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+
+    margin-left: 60px;
+}
+
+li a {
+    color: white;
+}
+
+header .login{
+    width: 150px;
+    height: 100%;
+
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button{
+    width: 50px;
+    font-size: 20px;
+
+    font-family: 'Staatliches';
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button:hover{
+    background-color: white;
+    color: black;
+
+    transition: 1s;
+}
+
+.container{
+    /* background-color: brown; */
+    display: flex;
+    padding: 100px;
+}
+
+.container .left_side{
+    width: 40%;
+    height: 400px;
+    /* background-color: black; */
+}
+
+.left_side .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+    color: white;
+}
+
+.left_side .texto{
+    font-size: 35px;
+    color: white;
+    font-family: 'Rajdhani';
+}
+
+.left_side .fake_button{
+    width: 200px;
+
+    font-size: 40px;
+    font-family: 'Rajdhani';
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+}
+
+.left_side .fake_button:hover{
+    animation: balance 5s;
+}
+
+.container .right_side{
+    width: 600px;
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: right;
+}
+
+.right_side img{
+    animation: bounce 3s ease infinite;
+    width: 300px;
+    height: 300px;
+}
+
+.conhecimentos{
+    background-color: #031027;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px;
+}
+
+.conhecimentos .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+    color: white;
+}
+
+.conhecimentos .subtitulo{
+    font-size: 35px;
+    font-family: 'Rajdhani';
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+}
+
+.card .nebulosa_img img{
+    width: 130px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -15px;
+}
+
+.card .headerzinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .titulo{
+    /* background-color: red; */
+    font-size: 30px;
+    color: black;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .titulo_two{
+    /* background-color: blue; */
+    font-size: 20px;
+    font-family: 'Rajdhani Medium';
+    float: left;
+
+    margin-left: 10px;
+}
+
+
+.nebulosa_img{
+    /* background-color: red; */
+}
+
+.card .texto{
+    width: 380px;
+    /* background-color: red; */
+    font-size: 18px;
+    font-family: 'Rajdhani Medium';
+}
+
+.descricao{
+    height: 80px;
+    background-color: white;
+    border-radius: 11px;
+    padding: 20px 30px 20px 80px;
+    cursor: pointer;
+}
+
+.descricao img{
+    z-index: initial;
+}
+.stars{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.teorias{
+    background-color: #010A1A;
+}
+
+.blok{
+    background-color: #031027;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 100px;
+}
+
+.blok .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+    color: white;}
+
+.blok .subtitulo{
+    font-size: 35px;
+    font-family: 'Rajdhani';
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    width: 500px;
+}
+
+.conteudo .fake_button{
+    width: 200px;
+    height: 60px;
+    font-family: 'Rajdhani';
+
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    font-size: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.conteudo .fake_button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+.footer{
+    background-color: #010A1A;
+
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .titulo{
+    font-size: 40px;
+    font-family: 'Staatliches';
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo .pg{
+    font-size: 18px;
+    font-family: 'Rajdhani';
+}
+
+.titulo .direitos{
+    font-size: 15px;
+    font-family:'Rajdhani';
+}
+
+.entrar{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar .titulo{
+    font-size: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction:row;
+}
+
+.entrar .subtitulo{
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #031027;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+/* Animações */
+@keyframes bounce {
+    20%{
+        transform: translate3d(0, -20px, 0);
+    }
+
+    40%{
+        transform: translate3d(0, -10px, 0);
+    }
+
+    80%{
+        transform: translate3d(0, 2px, 0);
+    }
+
+    100%{
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+@keyframes balance {
+    20%{
+        transform: translate3d(0, -5px, 0);
+    }
+
+    40%{
+        transform: translate3d(0, 0px, 0);
+    }
+
+    80%{
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100%{
+        transform: translate3d(0, 0px, 0);
+    }
+}

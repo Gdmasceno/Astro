@@ -1,0 +1,117 @@
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80px;
+    /* background-color: red; */
+    
+    background-image: url(../img/headerzinho.png);
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 25px;
+    width: 180px;
+    height: 100%;
+    /* background-color: green; */
+    color: white;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+header .menu{
+    width: 800px;
+    height: 100%;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    color: white;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+
+    margin-left: 60px;
+}
+
+li a {
+    color: white;
+}
+
+header .login{
+    width: 150px;
+    height: 100%;
+
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button{
+    width: 50px;
+    font-size: 20px;
+
+    font-family: 'Staatliches';
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button:hover{
+    background-color: white;
+    color: black;
+
+    transition: 1s;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #031027;
+    border: 3px solid #031027;
+    border-radius: 30px;
+}

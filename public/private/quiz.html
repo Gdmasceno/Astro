@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="../js/funcoes.js"></script>
+
     <header>
         <div class="logo"><img src="../public/resources/img/astronauta (1).png"> Astro</div>
         <div class="menu">
@@ -16,11 +18,9 @@
                 <li><a href="simulador.html">Simule seu peso</a></li>
             </ul>
         </div>
-        <a href="login.html">
-            <div class="sair">
+            <div class="sair" onclick="limparSessao()">
                 Sair
             </div>
-        </a>
     </header>
 
     <div id="one" class="main">
@@ -208,7 +208,7 @@
         </div>
 
         <div class="entrar"><img src="../public/resources/img/astronauta (1).png" alt="">
-            <div class="tituloF">Não possui conta? <div class="subtitulo">Clique aqui</div>
+            <div class="titulo">Não possui conta? <div class="subtitulo">Clique aqui</div>
             </div>
         </div>
     </div>
