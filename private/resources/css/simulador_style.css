@@ -1,0 +1,287 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #031027;
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    height: 80px;
+    /* background-color: red; */
+    
+    background-image: url(../../../public/resources/img/headerzinho.png);
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 25px;
+    width: 180px;
+    height: 100%;
+    /* background-color: green; */
+    color: white;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+header .menu{
+    width: 800px;
+    height: 100%;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    color: white;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+
+    margin-left: 60px;
+}
+
+li a {
+    color: white;
+}
+
+header .sair{
+    width: 150px;
+    height: 100%;
+    font-family: 'Rajdhani';
+    color: white;
+    font-weight: bold;
+
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button{
+    width: 50px;
+    font-size: 20px;
+
+    font-family: 'Staatliches';
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button:hover{
+    background-color: white;
+    color: black;
+
+    transition: 1s;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px 0px;
+}
+
+.container{
+    width: 900px;
+    min-height: 350px;
+    max-height: 480px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 60px;
+
+    padding: 50px 0px;
+}
+
+.container .titulo{
+    font-size: 60px;
+    font-family: 'Staatliches';
+}
+
+.container input{
+    width:250px;
+    height: 60px;
+    font-size: 40px;
+    text-align: center ;
+}
+
+
+.container input:focus{
+    outline: none;
+}
+
+.container button{
+    font-family: 'Rajdhani';
+    font-size: 40px;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.astros{
+    width: 600px;
+    /* background-color: blue; */
+    display: flex;
+}
+
+.astro{
+    width: 150px;
+    height: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.astro img{
+    width: 80%;
+}
+
+.nome{
+    font-size: 30px;
+    font-family: 'Staatliches';
+    margin-top: 20px;
+}
+
+.footer{
+    background-color: #010A1A;
+
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .titulo{
+    font-size: 40px;
+    font-family: 'Staatliches';
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .titulo .pg{
+    font-size: 18px;
+    font-family: 'Rajdhani';
+}
+
+.footer .titulo .direitos{
+    font-size: 15px;
+    font-family:'Rajdhani';
+}
+
+.entrar{
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar .titulo{
+    font-size: 25px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction:row;
+}
+
+.entrar .subtitulo{
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#lua:hover{
+    animation: balance 2s;
+    cursor: pointer;
+}
+
+#marte:hover{
+    animation: balance 2s;
+    cursor: pointer;
+}
+
+#jupiter:hover{
+    animation: balance 2s;
+    cursor: pointer;
+}
+
+#mercurio:hover{
+    animation: balance 2s;
+    cursor: pointer;
+}
+
+
+
+
+@keyframes balance {
+    20%{
+        transform: translate3d(0, -10px, 0);
+    }
+
+    40%{
+        transform: translate3d(0, 0px, 0);
+    }
+
+    80%{
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100%{
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+#two .titulo{
+    font-size: 30px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #031027;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+}

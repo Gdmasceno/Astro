@@ -14,7 +14,7 @@
         <div class="menu">
             <ul>
                 <li><a href="quiz.html">Quiz</a></li>
-                <li><a href="#conhecimentos">Simule seu peso</a></li>
+                <li><a href="simulador.html">Simule seu peso</a></li>
             </ul>
         </div>
             <div onclick="sair()" class="sair">
@@ -47,7 +47,7 @@
                     <img id="unic" src="resources/img/marte.png" alt="">
                 </div>
     
-                <div class="descricao" style="cursor: pointer;">
+                <div onclick="irSimulador()" class="descricao" style="cursor: pointer;">
                     <div class="headerzinho">
                         <div class="titulo">simule seu peso</div>
                     </div>
@@ -94,6 +94,10 @@
 
     function sair() {
         window.location.assign("../public/index.html");
+    }
+
+    function irSimulador() {
+        window.location.assign("simulador.html");
     }
 
 

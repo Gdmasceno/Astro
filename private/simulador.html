@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../public/resources/img/astronauta (1).png">
+    <link rel="stylesheet" href="resources/css/simulador_style.css">
+    <title>Astro | Simule seu peso</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="../public/resources/img/astronauta (1).png"> Astro</div>
+        <div class="menu">
+            <ul>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="simulador.html"><b>Simule seu peso</b></a></li>
+            </ul>
+        </div>
+        <a href="login.html">
+            <div class="sair">
+                Sair
+            </div>
+        </a>
+    </header>
+
+    <div class="main">
+        <div id="partOne" class="container">
+            <div class="titulo">Digite seu peso (em Kg)</div>
+            <div class="input">
+                <input id="txt_peso" type="text" maxlength="6">
+                <div id="erro" style="color: red; font-family: 'Rajdhani'; font-size: 20px; font-weight: bold;"></div>
+            </div>
+            <button onclick="validar()">PRÓXIMO</button>
+        </div>
+
+        <div id="partTwo" class="container" style="display: none;">
+            <div class="titulo">Escolha um astro</div>
+            <div class="astros">
+                <div id="lua" class="astro" onclick="calcularLua()">
+                    <img src="resources/img/lua.png" alt="">
+                    <div class="nome">Lua</div>
+                </div>
+                <div id="marte" class="astro" onclick="calcularMarte()">
+                    <img src="resources/img/marte.png" alt="">
+                    <div class="nome">Marte</div>
+                </div>
+                <div id="jupiter" class="astro" onclick="calcularJupiter()">
+                    <img src="resources/img/jupiter (1).png" alt="">
+                    <div class="nome">Júpiter</div>
+                </div>
+                <div id="mercurio" class="astro" onclick="calcularMercurio()">
+                    <img src="resources/img/mercurio.png" alt="">
+                    <div class="nome">Mercúrio</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultado" class="container" style="display: none;">
+        <img id="imgAstro" src="" alt="">
+        <div class="titulo">Você pesa <span id="mypeso">0</span>!!!</div>
+        <button onclick="voltar()">Voltar</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="titulo">Astro
+            <div class="pg">Home</div>
+            <div class="pg">Conhecimentos</div>
+            <div class="pg">Teorias</div>
+
+            <br>
+            <div class="direitos">© ASTRO - All Rights Reserved</div>
+
+        </div>
+
+        <div class="entrar"><img src="../public/resources/img/astronauta (1).png" alt="">
+            <div class="titulo">Não possui conta? <div class="subtitulo">Clique aqui</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    var pesos = {
+        "pesoTerra" : 0,
+        "pesoLua" : 0,
+        "pesoMarte" : 0,
+        "pesoJupiter" : 0,
+        "pesoMercurio" : 0
+    }
+
+    function validar(){
+        pesos.pesoTerra = Number(txt_peso.value);
+        console.log(pesos);
+
+        if(pesos.pesoTerra){
+            erro.innerHTML = "";
+            console.log("Pode seguir em frente");
+
+            partOne.style.display = "none";
+            partTwo.style.display = "flex";
+
+        }
+
+        else{
+            // console.log("Erro");
+
+            if(pesos.pesoTerra == 0){
+                erro.innerHTML = "Insira um peso";
+            }
+
+            else{
+                erro.innerHTML = "Não insira carácter";
+            }
+        }
+    }
+
+    function calcularLua(){
+        pesos.pesoLua = (pesos.pesoTerra/9.81)*1.622;
+        console.log(`Seu peso na lua é: ${pesos.pesoLua.toFixed(2)} `);
+        console.log(pesos);
+
+        imgAstro.src = "resources/img/lua.png";
+        mypeso.innerHTML = `${pesos.pesoLua.toFixed(2)}Kg na lua`;
+
+        partTwo.style.display = "none";
+        resultado.style.display = "flex";
+    }
+
+    function calcularMarte(){
+        pesos.pesoMarte = pesos.pesoTerra * 0.38;
+        console.log(pesos);
+        console.log(`Seu peso em marte é: ${pesos.pesoMarte.toFixed(2)}`);
+
+        imgAstro.src = "resources/img/marte.png";
+        mypeso.innerHTML = `${pesos.pesoMarte.toFixed(2)}Kg em marte`;
+
+        partTwo.style.display = "none";
+        resultado.style.display = "flex";
+    }
+
+    function calcularJupiter(){
+        pesos.pesoJupiter = pesos.pesoTerra * 2.64;
+        console.log(pesos);
+        console.log(`Seu peso em júpiter é: ${pesos.pesoJupiter.toFixed(2)}`);
+
+        imgAstro.src = "resources/img/jupiter (1).png";
+        mypeso.innerHTML = `${pesos.pesoJupiter.toFixed(2)}Kg em júpiter`;
+
+        partTwo.style.display = "none";
+        resultado.style.display = "flex";
+    }
+
+    function calcularMercurio(){
+        pesos.pesoMercurio = pesos.pesoTerra*0.37;
+        console.log(pesos);
+        console.log(`Seu peso em mercúrio é: ${pesos.pesoMercurio.toFixed(2)} `);
+
+        imgAstro.src = "resources/img/mercurio.png";
+        mypeso.innerHTML = `${pesos.pesoMercurio.toFixed(2)}Kg em mercúrio`;
+
+        partTwo.style.display = "none";
+        resultado.style.display = "flex";
+    }
+
+    function voltar(){
+        resultado.style.display = "none";
+        partTwo.style.display = "flex";
+    }
+</script>
