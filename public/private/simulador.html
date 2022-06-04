@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../public/resources/img/astronauta (1).png">
+    <link rel="icon" href="../resources/img/astronauta (1).png">
     <link rel="stylesheet" href="resources/css/simulador_style.css">
     <title>Astro | Simule seu peso</title>
 </head>
@@ -12,17 +12,22 @@
     <script src="../js/funcoes.js"></script>
 
     <header>
-        <div class="logo"><img src="../public/resources/img/astronauta (1).png"> Astro</div>
+        <div class="logo"><img src="../resources/img/astronauta (1).png"> Astro</div>
         <div class="menu">
             <ul>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="simulador.html"><b>Simule seu peso</b></a></li>
             </ul>
         </div>
-            <div class="sair" onclick="limparSessao()">
-                Sair
+            <div class="sair" onclick="abrirMenu()">
+                <img src="../resources/img/account.png" alt="" width="30px">
             </div>
     </header>
+
+    <div class="menubar" id="menu">
+        <div class="perfil"><a href="perfil.html">Perfil</a></div>
+        <div class="sair" onclick="limparSessao()" style="cursor: pointer;">Sair</div>
+    </div>
 
     <div class="main">
         <div id="partOne" class="container">
@@ -73,11 +78,6 @@
             <div class="direitos">© ASTRO - All Rights Reserved</div>
 
         </div>
-
-        <div class="entrar"><img src="../public/resources/img/astronauta (1).png" alt="">
-            <div class="titulo">Não possui conta? <div class="subtitulo">Clique aqui</div>
-            </div>
-        </div>
     </div>
 </body>
 </html>
@@ -121,6 +121,7 @@
 
     function calcularLua(){
         pesos.pesoLua = (pesos.pesoTerra/9.81)*1.622;
+        atualizarPeso();
         console.log(`Seu peso na lua é: ${pesos.pesoLua.toFixed(2)} `);
         console.log(pesos);
 
@@ -133,6 +134,7 @@
 
     function calcularMarte(){
         pesos.pesoMarte = pesos.pesoTerra * 0.38;
+        atualizarPeso();
         console.log(pesos);
         console.log(`Seu peso em marte é: ${pesos.pesoMarte.toFixed(2)}`);
 
@@ -145,6 +147,7 @@
 
     function calcularJupiter(){
         pesos.pesoJupiter = pesos.pesoTerra * 2.64;
+        atualizarPeso();
         console.log(pesos);
         console.log(`Seu peso em júpiter é: ${pesos.pesoJupiter.toFixed(2)}`);
 
@@ -157,6 +160,7 @@
 
     function calcularMercurio(){
         pesos.pesoMercurio = pesos.pesoTerra*0.37;
+        atualizarPeso();
         console.log(pesos);
         console.log(`Seu peso em mercúrio é: ${pesos.pesoMercurio.toFixed(2)} `);
 
@@ -171,4 +175,49 @@
         resultado.style.display = "none";
         partTwo.style.display = "flex";
     }
+
+
+
+
+    function atualizarPeso() {
+    console.log("ENTREI NO CADASTRAR QUIZ");
+    // aguardar();
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var peso = pesos;
+
+
+    fetch("/usuarios/cadastrarPeso", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idServer: idUsuario,
+            pesoServer: peso,
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
+            // window.location = "";
+            // limparFormulario();
+            // finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+    });
+
+    return false;
+}
+
+
+function abrirMenu(){
+    menu.style.display = "flex";
+}
 </script>

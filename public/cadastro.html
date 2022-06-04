@@ -24,12 +24,16 @@
                 <div class="entradas">
                     <br>
                     <input id="nome_input" type="text" placeholder="Digite seu nome...">
+                    <div id="erroNome" style="color: red; font-family: 'Rajdhani'; font-weight: bold;"></div>
                     <br>
                     <input id="email_input" type="text" placeholder="Digite seu email...">
+                    <div id="erroEmail" style="color: red; font-family: 'Rajdhani'; font-weight: bold;"></div>
                     <br>
                     <input id="senha_input" type="text" placeholder="Digite sua senha...">
+                    <div id="erroSenha" style="color: red; font-family: 'Rajdhani'; font-weight: bold;"></div>
                     <br>
                     <input id="confirmacao_senha_input" type="text" placeholder="Repita sua senha...">
+                    <div id="erroSenha2" style="color: red; font-family: 'Rajdhani'; font-weight: bold;"></div>
 
                     <br>
                     <br>
@@ -59,6 +63,10 @@
     function cadastrar() {
         // aguardar();
 
+        erroEmail.innerHTML ="";
+        erroNome.innerHTML ="";
+        erroSenha2.innerHTML ="";
+        erroSenha.innerHTML ="";
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -66,7 +74,7 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
+            erroSenha2.innerHTML = "Preencha todos os campos para prosseguir!";
 
             // finalizarAguardar();
             return false;
@@ -77,7 +85,7 @@
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            erroEmail.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
             // finalizarAguardar();
             return false;
         }
@@ -87,7 +95,7 @@
 
         if (senhaVar != confirmacaoSenhaVar) {
             // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "As senhas inseridas devem ser iguais para prosseguir!";
+            erroSenha2.innerHTML = "As senhas inseridas devem ser iguais para prosseguir!";
             // finalizarAguardar();
             return false;
         }
@@ -112,7 +120,7 @@
 
             if (resposta.ok) {
                 // cardErro.style.display = "block"
-                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
+                alert("Cadastro realizado com sucesso!");
                 window.location = "login.html";
                 // limparFormulario();
                 // finalizarAguardar();

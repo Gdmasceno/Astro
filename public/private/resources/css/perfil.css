@@ -1,0 +1,244 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #031027;
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    height: 80px;
+    /* background-color: red; */
+    
+    background-image: url(../../../public/resources/img/headerzinho.png);
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 25px;
+    width: 180px;
+    height: 100%;
+    /* background-color: green; */
+    color: white;
+    font-family: 'Staatliches';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+header .menu{
+    width: 800px;
+    height: 100%;
+
+    /* background-color: blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    color: white;
+    font-family: 'Rajdhani';
+    font-size: 20px;
+
+    margin-left: 60px;
+}
+
+li a {
+    color: white;
+}
+
+header .sair{
+    width: 150px;
+    height: 100%;
+    font-family: 'Rajdhani';
+    color: white;
+    font-weight: bold;
+
+    /* background-color: purple; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button{
+    width: 50px;
+    font-size: 20px;
+
+    font-family: 'Staatliches';
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+
+    padding: 5px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .fake_button:hover{
+    background-color: white;
+    color: black;
+
+    transition: 1s;
+}
+
+.mainOne{
+    background-color: #010A1A;
+    padding: 60px 0px 60px 150px;
+    display: flex;
+}
+
+.mainTwo{
+    padding: 60px 150px;
+    display: flex;
+}
+
+.mainTwo .titulo{
+    margin-top: 20px;
+}
+
+.mainTwo .dadoss{
+    margin-left: 300px;
+}
+
+.dadoss .titulo{
+    margin-left: 50px;
+}
+
+.mainTwo .dadoss .titulo span{
+    font-weight: normal;
+}
+.titulo{
+    font-size: 35px;
+    font-family: 'Staatliches',cursive;
+    color: white;
+}
+
+.card{
+    width: 400px;
+    height: 150px;
+    background-color: #06142D;
+    margin-top: 40px;
+    display: flex;
+}
+
+.card .left{
+    height: 100%;
+    width: 20px;
+    background-color: white;
+}
+
+.card .titulo{
+    font-family: 'Rajdhani';
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.card span{
+    font-weight: normal;
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+.planeta{
+    display: flex;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.planeta .titulo{
+    font-family: 'Rajdhani';
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.planeta span{
+    color: white;
+    font-size: 25px;
+    font-family: 'Rajdhani';
+    margin-left: 20px;
+}
+
+.planeta img{
+    width: 40px;
+}
+
+.planetas{
+    display: flex;
+}
+
+.grafic{
+    width: 300px;
+}
+
+.grafic canvas{
+    margin-top: 20px;
+}
+
+.menubar{
+    width: 70px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    margin-left: 88%;
+    display: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px;
+}
+
+
+.footer{
+    background-color: #010A1A;
+
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer .titulo{
+    font-size: 40px;
+    font-family: 'Staatliches';
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .titulo .pg{
+    font-size: 18px;
+    font-family: 'Rajdhani';
+}
+
+.footer .titulo .direitos{
+    font-size: 15px;
+    font-family:'Rajdhani';
+}

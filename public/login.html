@@ -28,14 +28,17 @@
                 <div class="entradas">
                     <br>
                     <input id="email_input" type="text" placeholder="Digite seu email...">
+                    <div id="erroEmail" style="color: red; font-family:'Rajdhani'; font-weight: bold;"></div>
                     <br>
                     <input id="senha_input" type="text" placeholder="Digite sua senha...">
+                    <div id="erroSenha" style="color: red; font-family: 'Rajdhani'; font-weight: bold;"></div>
 
                     <br>
                     <br>
                     <br>
 
                     <button onclick="entrar()">Entrar</button>
+                    <img id="agu" src="resources/img/aguardar.gif" alt="" width="150px" style="display: none;">
                 </div>
             </div>
         </div>
@@ -56,19 +59,22 @@
 
 
     function entrar() {
-        // aguardar();
+        aguardar();
 
         // console.log("ENTREI NO ENTRAR");
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
+        erroEmail.innerHTML = "";
+        erroSenha.innerHTML = "";
+
 
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
         if (emailVar == "" || senhaVar == "") {
             // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
-            // finalizarAguardar();
+            erroSenha.innerHTML = "Preencha todos os campos para prosseguir!";
+            finalizarAguardar();
             return false;
         }
         else {
@@ -77,8 +83,8 @@
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             // cardErro.style.display = "block"
-            // mensagem_erro.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
-            // finalizarAguardar();
+            erroEmail.innerHTML = "Ops, e-mail inválido! Verifique e tente novamente.";
+            finalizarAguardar();
             return false;
         }
         else {
@@ -136,6 +142,14 @@
 
     function sumirMensagem() {
         // cardErro.style.display = "none"
+    }
+
+    function aguardar(){
+        agu.style.display = "block";
+    }
+
+    function finalizarAguardar(){
+        agu.style.display = "none";
     }
 
 </script>

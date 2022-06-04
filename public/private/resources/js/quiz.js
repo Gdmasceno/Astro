@@ -194,3 +194,46 @@ function proximo10() {
 
     // console.log(qtdAcertos);
 }
+
+
+
+
+
+function cadastrarQuiz() {
+    console.log("ENTREI NO CADASTRAR QUIZ");
+    // aguardar();
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var qtdAcertoVar = qtdAcertos;
+    var qtdErro = 10 - qtdAcertos;
+
+
+    fetch("/usuarios/cadastrarQuiz", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idServer: idUsuario,
+            acertoServer: qtdAcertoVar,
+            erroServer: qtdErro,
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
+            window.location = "quiz.html";
+            // limparFormulario();
+            // finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+    });
+
+    return false;
+}

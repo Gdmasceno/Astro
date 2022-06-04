@@ -186,7 +186,8 @@ header .sair{
 
     padding: 50px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer .titulo{
@@ -284,4 +285,21 @@ header .sair{
     background-color: white;
     border: 3px solid white;
     border-radius: 30px;
+}
+
+.menubar{
+    width: 70px;
+    height: 60px;
+    background-color: white;
+    position: absolute;
+    margin-left: 88%;
+    display: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 10px;
 }

@@ -5,23 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/quiz_style.css">
-    <title>Document</title>
+    <link rel="icon" href="../resources/img/astronauta (1).png">
+    <title>Astro | Quiz</title>
 </head>
 <body>
     <script src="../js/funcoes.js"></script>
 
     <header>
-        <div class="logo"><img src="../public/resources/img/astronauta (1).png"> Astro</div>
+        <div class="logo"><img src="../resources/img/astronauta (1).png"> Astro</div>
         <div class="menu">
             <ul>
                 <li><a href="quiz.html"><b>Quiz</b></a></li>
                 <li><a href="simulador.html">Simule seu peso</a></li>
             </ul>
         </div>
-            <div class="sair" onclick="limparSessao()">
-                Sair
-            </div>
+        <div class="sair" onclick="abrirMenu()">
+            <img src="../resources/img/account.png" alt="" width="30px">
+        </div>
     </header>
+
+    <div class="menubar" id="menu">
+        <div class="perfil"><a href="perfil.html">Perfil</a></div>
+        <div class="sair" onclick="limparSessao()" style="cursor: pointer;">Sair</div>
+    </div>
 
     <div id="one" class="main">
 
@@ -192,7 +198,7 @@
 
             <img id="imagem" src="resources/img/astronauta.webp" style="width: 200px; border-radius: 20px">
 
-            <button onclick="window.location.reload()" class="start">Recomeçar</button>
+            <button onclick="cadastrarQuiz()" class="start">Finalizar</button>
         </div>
     </div>
 
@@ -206,11 +212,6 @@
             <div class="direitos">© ASTRO - All Rights Reserved</div>
 
         </div>
-
-        <div class="entrar"><img src="../public/resources/img/astronauta (1).png" alt="">
-            <div class="titulo">Não possui conta? <div class="subtitulo">Clique aqui</div>
-            </div>
-        </div>
     </div>
 </body>
 </html>
@@ -220,6 +221,14 @@
         one.style.display = 'none';
         two.style.display = 'flex';
     }
+
+    function abrirMenu(){
+    menu.style.display = "flex";
+}
+
+
+
+
 </script>
 
 <script src="resources/js/quiz.js"></script>

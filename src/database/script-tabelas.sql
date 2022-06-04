@@ -15,3 +15,11 @@ primary key(id,fkUsuario),
 planeta varchar(45),
 peso double
 );
+
+create table quiz(
+idQuiz int auto_increment,
+fkUsuario int, foreign key (fkUsuario) references usuario(id),
+primary key(idQuiz,fkUsuario),
+qtdAcerto int,
+qtdErro int
+);
